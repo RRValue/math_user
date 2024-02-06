@@ -15,11 +15,11 @@ mod tests {
 
     #[test]
     fn test_equations() {
-        assert_eq!(math_lingo!(one plus two), 3);
-        assert_eq!(math_lingo!(one plus nine), 10);
-        assert_eq!(math_lingo!(1 plus three), 4);
-        assert_eq!(math_lingo!(nine plus 100), 109);
+        assert_eq!(math_lingo!(one plus two), 3.0);
+        assert_eq!(math_lingo!(one plus nine), 10.0);
+        assert_eq!(math_lingo!(1 plus three), 4.0);
+        assert_eq!(math_lingo!(nine plus 100), 109.0);
         assert_eq!(math_lingo!(1.11 plus 2.22), 3.33);
-        assert_eq!(math_lingo!(1 through 3), 1 / 3);
+        assert_eq!(math_lingo!(1 through 3), 1.0 / 3.0);
     }
 }
