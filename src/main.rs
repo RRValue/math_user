@@ -10,6 +10,9 @@ fn main() {
     println!("Evaluate equation \"0.5 times 1.24\" = {}", math_lingo!(0.5 time 1.24));
     println!("Evaluate equation \"1 through 3\" = {}", math_lingo!(1 through 3));
     println!("Evaluate equation \"1 devided by 3\" = {}", math_lingo!(1 devided by 3));
+    println!("Evaluate equation \"(1 devided by 3) plus two\" = {}", math_lingo!((1 devided by 3) plus two));
+    println!("Evaluate equation \"(1 devided by (four devided by 2)\" = {}", math_lingo!(1 devided by (four devided by 2)));
+    println!("Evaluate equation \"(1 devided by 3) plus (four devided by 2)\" = {}", math_lingo!((1 devided by 3) plus (four devided by 2)));
 }
 
 #[cfg(test)]
@@ -27,5 +30,8 @@ mod tests {
         assert_eq!(math_lingo!(0.5 time 1.24), 0.5 * 1.24);
         assert_eq!(math_lingo!(1 through 3), 1.0 / 3.0);
         assert_eq!(math_lingo!(1 devided by 3), 1.0 / 3.0);
+        assert_eq!(math_lingo!((1 devided by 3) plus two), (1.0 / 3.0) + 2.0);
+        assert_eq!(math_lingo!(1 devided by (four devided by 2)), 1.0 / (4.0 / 2.0));
+        assert_eq!(math_lingo!((1 devided by 3) plus (four devided by 2)), (1.0 / 3.0) + (4.0 / 2.0));
     }
 }
